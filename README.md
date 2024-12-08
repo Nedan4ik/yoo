@@ -329,22 +329,7 @@ curl -X POST http://localhost:8080/api/v1/scan \
 
 ---
 
-#### 1. **Установка зависимостей**
-
-Перед запуском убедитесь, что у вас установлены:
-
-- **Node.js** (рекомендуется версия LTS).
-- **npm** — менеджер пакетов для Node.js.
-
-Затем установите необходимые модули:
-
-```bash
-npm install node-telegram-bot-api
-```
-
----
-
-#### 2. **Структура проекта**
+#### 1. **Структура проекта**
 
 Организуйте файлы следующим образом:
 
@@ -359,12 +344,14 @@ project/
 
 ---
 
-#### 3. **Настройка бота**
+#### 2. **Настройка бота**
 
 1. **Токен Telegram**
     - Вставьте токен вашего Telegram бота в файл `main.js`:
 
       ```javascript
+      const TelegramBot = require('node-telegram-bot-api');
+      
       const telegramBot = new TelegramBot('<ваш_токен>', {polling: true});
       ```
 
